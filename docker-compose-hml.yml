@@ -1,0 +1,21 @@
+services:
+  server:
+    image: docker.superkoch.com.br/painel-lojas:latest
+    build: frontend
+    volumes:
+        - /home/aplicacoes/painel-lojas/logs:/app/logs # TODO: Criar pasta nos logs
+    ports:
+      - '3080:3000'
+    environment:
+      - CONSINCO_DB_USER=$CONSINCO_DB_USER
+      - CONSINCO_DB_PASSWORD=$CONSINCO_DB_PASSWORD
+      - CONSINCO_DB_CONNECT_STRING=$CONSINCO_DB_CONNECT_STRING
+    deploy:
+      replicas: 1
+      placement:
+        max_replicas_per_node: 1
+    networks:
+      - network_custom
+networks:
+  network_custom:
+    external: true

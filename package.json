@@ -1,0 +1,24 @@
+{
+  "name": "painel-lojas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "cookie": "^0.6.0",
+    "next": "^14.2.3",
+    "react": "^18.3.2",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.6.0",
+    "typescript": "^5.0.0"
+  }
+}
